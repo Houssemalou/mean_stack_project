@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row row-col-3">
+        <div class="col" *ngFor="let local of localsList">
+            <div class="card" style="width: 18rem;">
+                <img src={{local.urlList[0]}} class="card-img-top" alt="...">
+                <div class="position-relative">
+                  <h5 class="card-title">{{local.cat}}</h5>
+                  <div class="p-3 mb-2 bg-light-subtle text-emphasis-light local-information">
+                    <p>lieu : {{local.lieu}}</p>
+                    <p>prix par mois : {{local.prix_mois}}</p>
+                    <a href="#" class="btn btn-primary">Réservé</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

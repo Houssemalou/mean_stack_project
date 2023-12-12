@@ -1,0 +1,28 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px; 
+}
+.row{
+    gap: 2px;
+    margin: auto;
+}
+img{
+    width: 18rem;
+    height: 200px;
+   
+}
+.local-information{
+    display: bloc;
+    gap:3px;
+}
+.local-surface{
+    display: flex;
+    gap:3px;
+}
+
+.local-prix-destination{
+    display: flex;
+    gap:3px;
+}

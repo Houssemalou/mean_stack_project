@@ -1,0 +1,23 @@
+section{
+    gap: 10px;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px; 
+}
+
+.locaux{
+    height: 50%;
+    margin: auto;
+}
+
+@media (max-width: 500px){
+    .btn-group{
+        display:block;
+        
+    }
+}
+
+
