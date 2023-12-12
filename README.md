@@ -1,1 +1,1 @@
-# mern_stack_project
+# mean_stack_project
