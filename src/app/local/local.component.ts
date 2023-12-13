@@ -69,6 +69,19 @@ export class LocalComponent {
               disponibilité : true,
               urlList :["../../assets/images/commerce/commerce1.jpg","../../assets/images/commerce/commerce2.jpg","../../assets/images/commerce/commerce1.jpg"]} 
       ];
+      otherLocals : Local[] = [...this.locals];
   constructor(){}
+  getAllLocals() : void {
+     this.otherLocals = [...this.locals]
+  }
+  getAppartements() : void {
+     this.otherLocals = this.locals.filter(local => local.cat=="appartement")
+  }
+  getCommercialLocal() : void {
+    this.otherLocals = this.locals.filter(local => local.cat=="local commercial")
+ }
+ getVillas() : void {
+  this.otherLocals = this.locals.filter(local => local.cat=="villa")
+}
 
 }

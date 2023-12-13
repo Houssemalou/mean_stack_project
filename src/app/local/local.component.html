@@ -3,12 +3,12 @@
         <div class="locaux">
             <h2 class="navbar-brand" style="font-size: 50px; color: brown; "> Notre Locaux</h2> 
             <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary">All</button>
-                <button type="button" class="btn btn-outline-primary">Appartements</button>
-                <button type="button" class="btn btn-outline-primary">Commercials</button>
-                <button type="button" class="btn btn-outline-primary">Villas</button>
+                <button type="button" class="btn btn-outline-primary" (click)="getAllLocals()">All</button>
+                <button type="button" class="btn btn-outline-primary" (click)="getAppartements()">Appartements</button>
+                <button type="button" class="btn btn-outline-primary" (click)="getCommercialLocal()">Commercials</button>
+                <button type="button" class="btn btn-outline-primary" (click)="getVillas()">Villas</button>
             </div>
         </div>
     </div>
-    <app-list-locals [localsList] ="locals"></app-list-locals>
+    <app-list-locals [localsList] ="otherLocals"></app-list-locals>
 </section>
