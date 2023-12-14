@@ -1,0 +1,25 @@
+@keyframes balancerY {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(-30deg);
+      -webkit-transform: rotateY(-30deg);
+      -moz-transform: rotateY(-30deg);
+      -ms-transform: rotateY(-30deg);
+      -o-transform: rotateY(-30deg);
+}
+    100% {
+      transform: rotateY(0deg);
+    }
+    
+    
+  }
+  
+  .image-animation-y {
+    transform-style: preserve-3d; /* Assurez-vous que la propriété transform-style est présente */
+    animation: balancerY 2s ease-in-out infinite;
+    /* ajustez la durée, le timing-function et l'itération selon vos préférences */
+  }
+  
+  
