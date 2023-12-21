@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { LocalComponent } from './local/local.component';
-import { App1Component} from './app1/app1.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { BookLocalComponent } from './book-local/book-local.component';
+import { SliderComponent } from './slider/slider.component';
+import { RouterOutlet } from '@angular/router';
+import { LocalDescriptionComponent } from './local-description/local-description.component';
+
 
 
 
@@ -11,9 +16,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LocalComponent, App1Component, NavbarComponent],
+  imports: [CommonModule, LocalComponent, NavbarComponent, BookLocalComponent,  SliderComponent, AboutComponent, FooterComponent, LocalDescriptionComponent, RouterOutlet ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
+  
 })
 export class AppComponent {
   

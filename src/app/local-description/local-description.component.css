@@ -1,0 +1,10 @@
+.slide{
+    width: 500px;
+    height: 400px;
+}
+#carouselExample{
+    height: 331px;
+}
+.float-right {
+    float: left;
+  }

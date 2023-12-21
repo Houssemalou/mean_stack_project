@@ -9,5 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './local-description.component.css'
 })
 export class LocalDescriptionComponent {
+  test : string = "none";
+
+  rate() : void{
+      this.test = "currentColor";
+  }
 
 }

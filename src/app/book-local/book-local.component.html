@@ -1,1 +1,124 @@
-<p>book-local works!</p>
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Réservé Maintenant
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <form #localInformation="ngForm" (ngSubmit) = "submitData(localInformation)" >
+                        <div>
+                            <input
+                                #refInput = "ngModel" 
+                                [(ngModel)]="userInput.ref"
+                                type="number" 
+                                class="form-control" 
+                                min="1000"
+                                name="ref" 
+                                placeholder="donner le reférence du local" 
+                                required 
+                            />
+                        </div>
+                        <div class="alert alert-warning" role="alert" *ngIf = "refInput.dirty && refInput.hasError('min')">
+                            le reférence doit être commencé à partir de 1000
+                        </div>
+                        <div>
+                            <input
+                                #nameInput = "ngModel" 
+                                [(ngModel)]="userInput.name"
+                                type="text" 
+                                class="form-control" 
+                                name="name" 
+                                placeholder="nom et prénom" 
+                                required 
+                            />
+                        </div>
+                        <div class="alert alert-warning" role="alert" *ngIf = "nameInput.dirty && nameInput.hasError('required')">
+                            il faut donner votre nom et prenom!
+                        </div>
+                        <div>
+                            <input
+                                #phoneInput = "ngModel"
+                                [(ngModel)]="userInput.phone" 
+                                type="text" 
+                                class="form-control" 
+                                name="phone" 
+                                placeholder="numero de téléphone"
+                                pattern="[2|5|9]\d{7}" 
+                            />
+                        </div>
+                        <div class="alert alert-warning" role="alert" *ngIf = "phoneInput.dirty && phoneInput.hasError('pattern')">
+                            le numero de téléphone est invalide!
+                        </div>
+                        <div>
+                            <input
+                                #emailInput = "ngModel"
+                                [(ngModel)]="userInput.email"
+                                type="email" 
+                                class="form-control" 
+                                name="mail" 
+                                placeholder=" email" 
+                                required 
+                            />
+                        </div>
+                        <div class="alert alert-warning" role="alert" *ngIf = "emailInput.dirty && emailInput.hasError('required')">
+                            il faut donner votre mail!
+                        </div>
+                        <div>
+                            <select class="form-control nice-select wide" name="numberOfPers" aria-placeholder="combient de personne?"  #numberOfPers = "ngModel" [(ngModel)]="userInput.numberOfPers" required>
+                                <option value="" disabled selected>
+                                    combient de personne?
+                                </option>
+                                <option value="1">
+                                    1
+                                </option>
+                                <option value="2">
+                                    2
+                                </option>
+                                <option value="3">
+                                    3
+                                </option>
+                                <option value="4">
+                                    4
+                                </option>
+                                <option value="5">
+                                    5
+                                </option>
+                            </select>
+                        </div>
+                        <div class="alert alert-warning" role="alert" *ngIf = "numberOfPers.dirty && numberOfPers.hasError('required')">
+                            il faut donner le nombre des personnes!
+                        </div>
+                        <div>
+                            <input
+                                [min]="getCurrentDate()"
+                                #dateInput = "ngModel"
+                                [(ngModel)]="userInput.date"
+                                type="date" 
+                                class="form-control" 
+                                name="date d'allocation"
+                                placeholder="date de début d'allocation" 
+                                required
+                            >
+                        </div>
+                        <div class="alert alert-warning" role="alert" *ngIf = "dateInput.dirty && dateInput.hasError('min')">
+                            la date de début d'allocation est invalide!
+                        </div>
+                        <div class="btn_box">
+                            <button type="submit" [disabled] = "localInformation.invalid">
+                                Confirmer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container ">
+                    <div id="googleMap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

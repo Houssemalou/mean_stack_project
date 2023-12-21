@@ -26,3 +26,6 @@ img{
     display: flex;
     gap:3px;
 }
+.card{
+    margin: 10px;
+}

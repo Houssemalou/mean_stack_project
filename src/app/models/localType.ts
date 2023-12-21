@@ -1,9 +1,10 @@
 export class Local{
-    surface! : number; // n'est pas obligatoire
-    nb_chambre!: number;
+    ref!: Number;
+    surface! : Number; 
+    nb_chambre!: Number;
     cat! : string;
     lieu! : string;
-    prix_mois! : number;
+    prix_mois! : Number;
     disponibilité! : boolean;
     urlList! : string[];
 }
