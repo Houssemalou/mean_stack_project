@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookLocalComponent } from './book-local/book-local.component';
 import { SliderComponent } from './slider/slider.component';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { LocalDescriptionComponent } from './local-description/local-description.component';
 
 
@@ -16,12 +16,12 @@ import { LocalDescriptionComponent } from './local-description/local-description
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, LocalComponent, NavbarComponent, BookLocalComponent,  SliderComponent, AboutComponent, FooterComponent, LocalDescriptionComponent, RouterOutlet ],
+  imports: [CommonModule, LocalComponent, NavbarComponent,  BookLocalComponent,  SliderComponent, AboutComponent, FooterComponent, LocalDescriptionComponent, RouterOutlet ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   
   
 })
 export class AppComponent {
-  
+  title = "hello";
 }

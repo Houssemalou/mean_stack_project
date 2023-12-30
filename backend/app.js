@@ -110,6 +110,20 @@ app.get('/api/locals', async (req, res) => {
     res.status(500).send('Erreur serveur');
   }
 });
+app.get('/api/locals/:ref', async (req, res) => {
+  try {
+    const ref = req.params.ref;
+    const localDoc = await local.findOne({ ref });
+    if (localDoc) {
+      res.status(200).json(localDoc);
+    } else {
+      res.status(404).json({ message: 'Document non trouvé' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Erreur serveur');
+  }
+});
 
 app.post('/api/bookLocal', (req, res) => {
   

@@ -6,5 +6,5 @@ import { LocalComponent } from './local/local.component';
 export const routes: Routes = [
     {'path' : '', component : LocalComponent},
     {'path' : 'book', component : BookLocalComponent},
-    {'path' : 'local/:id', component : LocalDescriptionComponent}
+    {'path' : 'local/:ref', component : LocalDescriptionComponent}
 ];

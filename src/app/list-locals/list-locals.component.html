@@ -2,13 +2,13 @@
     <div class="row row-col-3">
         <div class="col" *ngFor="let local of localsList">
             <div class="card" style="width: 18rem;">
-                <img src={{local.urlList[0]}} class="card-img-top" alt="...">
+                <a [routerLink]="'/local/' + local.ref"><img src={{local.urlList[0]}} class="card-img-top" alt="..."></a>
                 <div class="position-relative">
                   <h5 class="card-title text-center">{{local.cat}}</h5>
                   <div class="p-3 mb-2 bg-light-subtle text-emphasis-light local-information">
                     <p class="text-start">lieu : {{local.lieu}}</p>
                     <p class="text-start">prix par mois : {{local.prix_mois}}</p>
-                    <a href="#" class="btn btn-primary text-center">Réservé</a>
+                    <a routerLink="/book" class="btn btn-primary text-center">Réservé</a>
                   </div>
                 </div>
             </div>
